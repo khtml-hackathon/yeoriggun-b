@@ -35,8 +35,16 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	//Swagger 의존성
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
+
+	//db
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("mysql:mysql-connector-java:8.0.33")
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
